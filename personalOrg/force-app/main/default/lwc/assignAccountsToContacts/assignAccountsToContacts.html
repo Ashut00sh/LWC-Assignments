@@ -1,0 +1,16 @@
+<template>
+    <div class="slds-m-top_small slds-m-bottom_medium">
+        <lightning-button variant="brand" label="showAccount" title="show " onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    </div>
+    <template if:true={isVisible}>
+        <div style="height: 200px;">
+            <lightning-datatable key-field="Id" data={data} columns={columns} onrowaction={handleRowAction} hide-checkbox-column></lightning-datatable>
+        </div>
+        <!-- <div class="slds-modal_footer">
+            <lightning-button icon-name="utility:close" label="close" variant="brand" onclick={close}></lightning-button>
+        </div> -->
+    </template>
+    <lightning-card title="show accounts card">
+
+    </lightning-card>
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <lightning-card>
+        <lightning-datatable
+            key-field="id"
+            hide-checkbox-column="true"
+            data={reocordsData}
+            columns={columns}
+            onrowaction={handleRowAction}>
+         </lightning-datatable>
+    </lightning-card>
+</template>

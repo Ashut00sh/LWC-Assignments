@@ -1,0 +1,22 @@
+<template>
+    <lightning-card>
+        <div class="slds-grid slds-wrap slds-m-around_small">
+            <div class="slds-col slds-size_9-of-12">
+                <lightning-combobox
+                name="object"
+                value="object"
+                placeholder="Select Object"
+                options={selectOptions}
+                onchange={handleObjectChange}>
+
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_2-of-12 slds-m-top_medium slds-m-left_medium">
+                <lightning-button label="Create New Record" onclick={handleCreateNewRecord}></lightning-button>
+            </div>
+        </div>
+        <div>
+            <c-dynamic-obj-two></c-dynamic-obj-two>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="This is the parent component">
+        <c-child-component str-name = "The value of strName change from parent"></c-child-component>
+        <lightning-button variant="brand" label="CallChildMethod" onclick={handleClick}></lightning-button>
+    </lightning-card>
+    <lightning-card>
+        <lightning-input name="firstNam" label="First Name" onchange={handleChange}></lightning-input>
+        <lightning-input name="lastNam" label="Last Name" onchange={handleChange}></lightning-input>
+    </lightning-card>
+    <lightning-card title="show the udpated fullname">
+        <h1>Updated FirstName : <b>{fullName.firstName}</b></h1><br></br>
+        <h1>Updated LastName : <b>{fullName.lastName}</b></h1>
+    </lightning-card>
+    <lightning-card>
+        <div style="height: 200px">
+            <lightning-datatable key-field = "id"
+            data ={data}
+            columns ={columns}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

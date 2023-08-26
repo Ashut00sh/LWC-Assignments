@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Create Records By Using Apex" icon-name="standard:account_info">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Id" disable value={accId}></lightning-input>
+            <lightning-input label="Account Name" onchange={handleAccNameChange} class="slds-m_x-small"></lightning-input>
+            <lightning-input label="Account Number" onchange={handleAccNumChange} class="slds-m_x-small slds-p-bottom_medium"></lightning-input>
+            <lightning-button label="Creat Account" variant="brand" onclick={onCreateAcc} class="slds-m_x-small"></lightning-button>
+            <template if:true={showViewButton}>
+                <lightning-button icon-name="action:preview"  variant="brand" onclick={viewAccRecord} class="slds-p-left_x-large"></lightning-button>
+            </template>
+           
+        </div>
+    </lightning-card>
+</template>

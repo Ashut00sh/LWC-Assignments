@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Opportunity Data Table">
+        <template for:each={opportunityMap} for:item="mapObj">
+            {mapObj.key}
+            <lightning-datatable
+                key-field="Id"
+                data={mapObj.value}
+                columns={columns}
+                hide-checkbox-column="true"
+                key={key}>
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

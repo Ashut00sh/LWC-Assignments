@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Update Account Record" icon-name="sandard: your_account"> 
+        <lightning-input label="Account Name" onchange={handelNameChange} class="slds-m_x-small"></lightning-input>
+        <lightning-input label="Account Number" onchange={handelNumberChange} class="slds-m_x-small"></lightning-input>
+        <lightning-input label="Website" onchange={handelWebsiteChange} class="slds-m-around_medium"></lightning-input>
+        <lightning-button icon-name="Standard:record_update" label="Update Record" variant="brand" onclick={updateAccRec} class="slds-m-around_medium"></lightning-button>
+    </lightning-card>
+</template>

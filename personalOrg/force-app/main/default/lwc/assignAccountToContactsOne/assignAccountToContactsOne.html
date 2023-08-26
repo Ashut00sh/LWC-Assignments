@@ -1,0 +1,17 @@
+<template>
+   <div class="slds-m-top_small slds-m-bottom_medium">
+        <lightning-button variant="brand" label={showContact} title="show" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    </div>
+    <template if:true={isVisible}>
+        <div style="height: 200px;">
+            <lightning-datatable
+            key-field="Id"
+            data={data}
+            columns={columns}
+            onrowaction={handleRowActionFunction}
+            hide-checkbox-column>
+            
+            </lightning-datatable>
+        </div>
+    </template>
+</template>

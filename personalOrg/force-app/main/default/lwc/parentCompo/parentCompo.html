@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="parent card">
+        <lightning-input class="slds-p-horizontl_small"
+        label="Set Counter"
+        value={counterVal}
+        min="0"
+        max="100"
+        onchange={handleChange}>
+
+        </lightning-input>
+        <lightning-button class="slds-p-horizontal_small"
+        label="Add 100 In Counter"
+        onclick={hanldeAddCounter}>
+
+        </lightning-button>
+        <!-- Call child component -->
+        <c-child-compo
+        counter={counterVal}>
+
+        </c-child-compo>
+    </lightning-card>
+</template>

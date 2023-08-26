@@ -1,0 +1,20 @@
+<template>
+    <lightning-card>
+        <div if:true={isShowFields} class="slds-grid slds-wrap slds-m-around_x-small">
+            <div class="slds-col slds-size_3-of-12 slds-scrollable_y" style = "height:700px;">
+                <lightning-checkbox-group name="Checkbox Group"
+                    label="Checkbox Group"
+                    options={options}
+                    value={}
+                    onchange={handleFieldSelection}>
+                </lightning-checkbox-group>
+                <lightning-button label="Show Data" name="Show Data" onclick={handleGetRecords}></lightning-button>
+            </div>
+            <div class="slds-col slds-size_8-of-12 slds-m-around_x-small">
+                <div class="slds-scrollable_y" style="height:700px;">
+                    <c-dynamic-obje-three></c-dynamic-obje-three>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

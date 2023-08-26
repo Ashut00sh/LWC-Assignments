@@ -1,0 +1,62 @@
+<template>
+    <div class="slds-theme_shade">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <lightning-combobox 
+               
+                name="objectTypeName"
+                value={value} 
+                onchange={handleChange} 
+                options={objectTypeList}
+                placeholder="Object Type">
+                </lightning-combobox>
+            </div>
+            <div class="slds-col">
+                <lightning-combobox
+                name="object List"
+                onchange={onObjectChange}
+                options={objectList}
+                placeholder="Select Object">
+                </lightning-combobox>
+            </div>
+        </div>
+    </div>
+    <template if:true={isShowFields}>
+        <div class="slds-card">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_3-of-12 slds-scrollable_y" style = "height:700px;">
+                    <lightning-checkbox-group class="slds-grid slds-wrap slds-m-around_x-small"
+                    name="SelectFields"
+                    label="Select Fields"
+                    options={fieldList}
+                    value={fieldList}
+                    onchange={handleSelectedFields}>
+
+                    </lightning-checkbox-group>
+                    <template if:true={visibleShowRecords}>
+                        <lightning-button 
+                        label="Show Records"
+                        variant="brand"
+                        onclick={handleClick}>
+                
+                        </lightning-button>
+                    </template>
+                </div>
+            
+                <div class="slds-col slds-size_8-of-12 slds-scrollable_y" style = "height:700px;">
+                    <template if:true={isShowRecords}>
+                        <lightning-card title="Show The DataTable">
+                                <lightning-datatable
+                                        key-field="id"
+                                        hide-checkbox-column=true
+                                        data={filterData}
+                                        columns={columns}
+                                        onrowaction={handleRowAction}>
+                                </lightning-datatable>
+                        </lightning-card>
+                    </template>
+                </div>
+            </div>
+        </div> 
+    </template>
+</template>
